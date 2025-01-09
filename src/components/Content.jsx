@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Content() {
   return (
     <div>
@@ -10,79 +10,67 @@ function Content() {
         </h1>
       </div>
       <div className="second-img-container">
-        <h2>
-          Tutaj też będzie jakiś
-          teksthhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-        </h2>
+        <h5>
+          Jestem absolwentem studiów wyższych o kierunku informatyka. Tworzę strony internetowe z pasji oraz zwracam uwagę nawet na najmniejsze szczegóły   
+        </h5>
         <img
           src="https://www.jobhopin.com/blog/wp-content/uploads/2020/01/Untitled-design-2.png"
           className="rightimg"
           alt="programista"
         ></img>
+        <Link to="/Aboutme" className="nav-link " aria-current="page">
+          <button type="button" class="btn btn-primary btn-animated px-4 py-2">
+            WIĘCEJ O MNIE
+          </button>
+        </Link>
       </div>
       <div className="img-container">
         <img
-          src="https://imgproxy.divecdn.com/5wYoZzVDsgNPU17MBJKOl1OA9xxNU61Smgytvp_p4nU/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzQ3MjQ5MDU5LmpwZw==.webp"
+          src="https://media.istockphoto.com/id/1418476287/photo/businessman-analyzing-companys-financial-balance-sheet-working-with-digital-augmented-reality.jpg?s=612x612&w=0&k=20&c=Cgdq4iCELzmCVg19Z69GPt0dgNYbN7zbAARkzNSpyno="
           className="leftimg"
-          alt="uścisk dłoni"
+          alt="wzrost biznesu"
         ></img>
         <h2>
-          Tutaj będzie jakiś
-          tekstgfhgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+          Chcesz zwiększyć zyski swojego biznesu?
         </h2>
       </div>
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <h5>Pierwszy tekst, później coś dodam</h5>
+      <div
+        id="carouselExampleInterval"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active" data-bs-interval="4000">
+            <h5>Chcesz zwiększyć zyski swojego biznesu?</h5>
           </div>
-          <div class="carousel-item">
-            <h5>Też coś potem dodam</h5>
+          <div className="carousel-item" data-bs-interval="4000">
+            <h5>Dodam coś 2</h5>
           </div>
-          <div class="carousel-item">
-            <h5>Będzie dodane</h5>
+          <div className="carousel-item" data-bs-interval="4000">
+            <h5>Dodam coś 3</h5>
           </div>
         </div>
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleInterval"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleInterval"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
+      </div>
+      <div className="forms-container">
+        <h5>Tutaj dodam formsy</h5>
       </div>
     </div>
   );

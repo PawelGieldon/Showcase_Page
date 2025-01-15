@@ -19,17 +19,17 @@ function Content() {
           alt="programista"
         ></img>
         <Link to="/Aboutme" className="nav-link " aria-current="page">
-          <button type="button" class="btn btn-primary btn-animated px-4 py-2">
+          <button type="button" className="btn btn-primary btn-animated px-4 py-2">
             WIĘCEJ O MNIE
           </button>
         </Link>
       </div>
-      <div className="img-container">
-        <img
-          src="https://media.istockphoto.com/id/1418476287/photo/businessman-analyzing-companys-financial-balance-sheet-working-with-digital-augmented-reality.jpg?s=612x612&w=0&k=20&c=Cgdq4iCELzmCVg19Z69GPt0dgNYbN7zbAARkzNSpyno="
-          className="leftimg"
-          alt="wzrost biznesu"
-        ></img>
+      <div className="img-container">       
+          <img
+            src="https://media.istockphoto.com/id/1418476287/photo/businessman-analyzing-companys-financial-balance-sheet-working-with-digital-augmented-reality.jpg?s=612x612&w=0&k=20&c=Cgdq4iCELzmCVg19Z69GPt0dgNYbN7zbAARkzNSpyno="
+            className="leftimg"
+            alt="wzrost biznesu"
+          ></img>
         <h2>
           Chcesz zwiększyć zyski swojego biznesu?
         </h2>
@@ -40,13 +40,13 @@ function Content() {
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="4000">
+          <div className="carousel-item active" data-bs-interval="3000">
             <h5>Chcesz zwiększyć zyski swojego biznesu?</h5>
           </div>
-          <div className="carousel-item" data-bs-interval="4000">
+          <div className="carousel-item" data-bs-interval="3000">
             <h5>Dodam coś 2</h5>
           </div>
-          <div className="carousel-item" data-bs-interval="4000">
+          <div className="carousel-item" data-bs-interval="3000">
             <h5>Dodam coś 3</h5>
           </div>
         </div>
@@ -69,9 +69,7 @@ function Content() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <div className="forms-container">
-        <h5>Tutaj dodam formsy</h5>
-      </div>
+      
     </div>
   );
 }

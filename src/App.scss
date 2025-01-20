@@ -42,6 +42,22 @@ body {
   background-color: rgba(17, 24, 39, 0.5);
 }
 
+.intro-text {
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    
+    letter-spacing: 3px;
+    line-height: 1.4;
+    padding: 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Cień tekstu dla lepszej widoczności */
+    max-width: 80%; /* Maksymalna szerokość nagłówka */
+    z-index: 1;
+}
+
 .img-container { 
   display: flex;
   align-items: center;
@@ -49,21 +65,30 @@ body {
   background-color: #111827;
   border-bottom: 3px solid rgba(255, 255, 255, 0.2) ;
   border-top: 3px solid rgba(255, 255, 255, 0.2) ;
+  
 
   .leftimg {
     margin-top: 6rem;
     width: 35%;
-    height: 70vh;
+    height: 60vh;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
-  h2{
+  p{
     color: white;
-    width: 30%;
+    width: 35%;
     word-wrap: break-word;
+    margin: 0;
+    
+    span {
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
   }
 }
+
 
 .second-img-container {
   display: flex;
@@ -71,45 +96,94 @@ body {
   align-items: center;
   background-color: #111827;
   
-  
   .rightimg {
     margin-top:8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 8rem;
     width: 35%;
-    height: 70vh;  
+    height: 60vh;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.2);  
+    
   }
 
   .btn {
     font-weight: bolder;
-    margin-top: 5rem;
     
   }
 
-  h2{ 
-    color: white; 
+  p{ 
     word-wrap: break-word;
+    span {
+      font-weight: bold;
+    }
   }
 
   .text-button {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 25%; 
+    align-items: center;
+    width: 35%; 
     
   }
 }
 
+.about-me {
+  font-family: 'Poppins', Arial, sans-serif; /* Nowoczesna i czytelna czcionka */
+  font-size: 1.2rem; /* Większa czcionka dla lepszej czytelności */
+  line-height: 1.8; /* Więcej przestrzeni między wierszami */
+  color: #ffffff; /* Jasny kolor tekstu */
+  padding: 2rem; /* Duży odstęp wewnętrzny */
+  border-radius: 12px; /* Zaokrąglenie rogów dla nowoczesnego wyglądu */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Mocniejszy cień dla efektu głębi */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  margin: 2rem auto; /* Wyśrodkowanie na stronie */
+  position: relative; /* Umożliwienie dodania ozdobnych elementów */
+  overflow: hidden; /* Ukrycie elementów wychodzących poza granice kontenera */
+
+}
+
+/* Dodanie ozdobnych detali */
+.about-me::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.about-me::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Podkreślenie i wzmocnienie efektu interakcji */
+.about-me:hover {
+  transform: translateY(-5px); /* Subtelny efekt podniesienia */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Większy cień */
+  transition: all 0.3s ease; /* Płynna animacja */
+}
+
 h1 {
   color: white;
-  width: 40%;
+  width: 50%;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-weight: bolder;
+  
 }
 
 #carouselExampleInterval {
@@ -124,11 +198,11 @@ h1 {
 .carousel-item  {
   height: 40vh;
   
-  
   h5 {
+    
     color: white;
     text-align: center;
-    margin-top: 10.5rem
+    margin-top: 18.5vh;
   }
 }
 
@@ -146,13 +220,13 @@ h1 {
   display: flex;
   width: 40%;
   margin: 0 auto;
-  
+  justify-content: center;
+  align-items: center;
 }
 .links-container {
   margin-left: 3rem;
   display: flex;
   
-
   svg {
     font-size: 1.6rem;
   }
@@ -160,6 +234,7 @@ h1 {
   p {
     margin-left: 1rem;
     font-size: 1.1rem;
+    white-space: nowrap;
   }
 }
 
@@ -308,18 +383,56 @@ h1 {
   }
 }
 
-@media (max-width: 768px) {
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-content {
+  background: #162029;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.popup-content button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.popup-content button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 860px) {
+.intro-text {
+  font-size: 30px;
+}
+
   .second-img-container {
     flex-direction: column; /* Układ pionowy */
     text-align: center; /* Centruj tekst */
     justify-content: baseline;
     
     .rightimg{
-      width: 85%;
+      width: 80%;
       height: 50vh;
+      margin-top: 2rem;
     }
-    h2{
-        padding: 4rem;
+    p{
+        
+        margin-top: 4rem;
     }
     .btn {
       
@@ -336,14 +449,14 @@ h1 {
     justify-content: baseline;
     
     .leftimg{
-      width: 85%;
+      width: 80%;
       height: 50vh;
     }
 
-    h2{
+    p{
       width: 90%;
-      padding: 4rem;
-      padding-bottom: 11rem;
+      margin-bottom: 6rem;
+      
     }
 
     .btn-bottom {
@@ -363,8 +476,26 @@ h1 {
   }
 
   h1 {
-    margin-top: 5rem;
     width: 90%;
+  }
+
+}
+
+
+@media screen and (min-width: 861px) and (max-width: 1335px) {
+  .img-container p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 55%;
+  }
+
+  .second-img-container .btn {
+    margin-bottom: 1rem;
+
+  }
+
+  .second-img-container .text-button {
+    width: 55%;
   }
 
 }

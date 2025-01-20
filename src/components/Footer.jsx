@@ -8,7 +8,7 @@ function Footer() {
                 <p>COPYRIGHT &copy; {new Date().getFullYear()} ALL RIGHTS RESERVED.</p>
                 <div className="links-container">
                     <LuMail/>
-                    <p>E-mail : przykładowy mail@gmail.com</p>
+                    <p>E-mail</p>
                 </div>
             </div>
         </footer>

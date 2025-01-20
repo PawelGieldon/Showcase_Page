@@ -44,18 +44,17 @@ function Content() {
   return (
     <div>
       <div className="introduction">
-        <h1>
-          Nazywam się Paweł i tworzę strony internetowe wizytówki za
-          ekstremalnie tanią cenę
+        <h1 className="intro-text">
+          Pierwsze Wrażenie Liczy się w Sieci - Zbuduj Je z Naszą Stroną Wizytówką
         </h1>
       </div>
       <div className="second-img-container">
         <motion.div ref={textRef} style={{ x: textX }} className="text-button">
-          <h2>
-            Jestem absolwentem studiów wyższych o kierunku informatyka. Tworzę
-            strony internetowe z pasji oraz zwracam uwagę nawet na najmniejsze
-            szczegóły
-          </h2>
+          <p className="about-me">
+            <span>Nazywam się Paweł</span> i jestem pasjonatem tworzenia interaktywnych i estetycznych stron internetowych jako front-end developer. 
+            Specjalizuję się w łączeniu nowoczesnych technologii z kreatywnym podejściem do projektowania, tworząc witryny, które nie tylko wyglądają świetnie, 
+            ale też działają bez zarzutu.
+          </p>
           <Link to="/Aboutme" className="nav-link " aria-current="page">
             <button
               type="button"
@@ -86,14 +85,14 @@ function Content() {
          className="leftimg"
          alt="wzrost biznesu"
         />
-        <motion.h2 ref={h2Ref} style={{ x: h2X }}
+        <motion.p ref={h2Ref} style={{ x: h2X }} className="about-me"
         >
-          Chcesz zwiększyć zyski swojego biznesu?Chcesz zwiększyć zyski swojego
-          biznesu? Chcesz zwiększyć zyski swojego biznesu?Chcesz zwiększyć zyski
-          swojego biznesu? Chcesz zwiększyć zyski swojego biznesu?Chcesz
-          zwiększyć zyski swojego biznesu?Chcesz zwiększyć zyski swojego
-          biznesu?Chcesz zwiększyć zyski swojego biznesu?
-        </motion.h2>
+          <span>Zwiększ zyski swojego biznesu dzięki profesjonalnej stronie internetowej </span> 
+           Tworzę strony internetowe, które nie tylko przyciągają uwagę, ale przede wszystkim 
+          przyczyniają się do wzrostu Twoich zysków. Moje projekty są dostosowane do specyfiki Twojego biznesu, 
+          zapewniając optymalizację pod kątem konwersji i efektywności. Dzięki nowoczesnym technologiom, estetycznemu designowi i intuicyjnej obsłudze, 
+          Twoja strona stanie się narzędziem, które przyciąga nowych klientów, buduje lojalność i zwiększa sprzedaż.
+        </motion.p>
       </div>
       <div
         id="carouselExampleInterval"

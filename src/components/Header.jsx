@@ -6,7 +6,8 @@ function Header() {
 return (
     <div>
       <nav className="navbar fixed-top navbar-expand-lg">
-        <div className="container-fluid ">        
+        <div className="container-fluid "> 
+          <a class="navbar-brand" href="#"></a>       
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

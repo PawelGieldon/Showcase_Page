@@ -101,13 +101,13 @@ function Content() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="3000">
-            <h5>Chcesz zwiększyć zyski swojego biznesu?</h5>
+            <h5>W pełni Responsywna strona!</h5>
           </div>
           <div className="carousel-item" data-bs-interval="3000">
-            <h5>Dodam coś 2</h5>
+            <h5>Projekt tworzony za pomocą najnowszych technologii</h5>
           </div>
           <div className="carousel-item" data-bs-interval="3000">
-            <h5>Dodam coś 3</h5>
+            <h5>Wyjątkowa jakość za niską cenę!</h5>
           </div>
         </div>
         <button

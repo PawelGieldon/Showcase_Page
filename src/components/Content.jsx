@@ -58,7 +58,7 @@ function Content() {
           <Link to="/Aboutme" className="nav-link " aria-current="page">
             <button
               type="button"
-              className="btn btn-primary btn-animated px-4 py-2"
+              className="btn btn-animated px-4 py-2"
             >
               WIĘCEJ O MNIE
             </button>

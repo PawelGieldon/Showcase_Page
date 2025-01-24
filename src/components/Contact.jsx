@@ -13,8 +13,9 @@ function Contact() {
     const name = formData.get("user_name").trim();
     const email = formData.get("user_email").trim();
     const message = formData.get("message").trim();
+    const telephone = formData.get("telephone").trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !telephone) {
       setPopupMessage("Please fill out all fields before sending the message.");
       setIsPopupVisible(true);
       return;
@@ -62,16 +63,19 @@ function Contact() {
       </div>
 
       <form ref={form} onSubmit={sendEmail}>
-        <label className="form-label">Name</label>
+        <label className="form-label">Imię</label>
         <input className="form-input" type="text" name="user_name" />
 
         <label className="form-label">Email</label>
         <input className="form-input" type="email" name="user_email" />
 
-        <label className="form-label">Message</label>
+        <label className="form-label">Telefon</label>
+        <input className="form-input" type="text" name="telephone" />
+
+        <label className="form-label">Wiadomość</label>
         <textarea className="form-textarea" name="message"></textarea>
 
-        <input className="form-submit" type="submit" value="Send" />
+        <input className="form-submit" type="submit" value="Wyślij" />
       </form>
     </div>
   );

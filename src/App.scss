@@ -25,11 +25,11 @@ body {
 }
 
 .introduction {
-  background-image: url('https://ccitraining.edu/wp-content/uploads/2023/12/Information-Technology.jpg');
+  background-image: url('../Tech.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  
 }
 
 .introduction::before {
@@ -39,7 +39,7 @@ body {
   left: 0;
   width: 100%;
   height: 80vh;
-  background-color: rgba(17, 24, 39, 0.5);
+  background-color: rgba(17, 24, 39, 0.6);
 }
 
 .intro-text {
@@ -47,15 +47,11 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
-    
     letter-spacing: 3px;
     line-height: 1.4;
     padding: 20px;
-    
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Cień tekstu dla lepszej widoczności */
     max-width: 80%; /* Maksymalna szerokość nagłówka */
-    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Efekt cienia */
 }
 
 .img-container { 
@@ -108,7 +104,7 @@ body {
 
   .btn {
     font-weight: bolder;
-    
+    background-color: #E11D48;
   }
 
   p{ 
@@ -214,28 +210,42 @@ h1 {
   margin-top: 5rem;
   border-top: 2px solid rgba(255, 255, 255, 0.2); /* Cienki półprzezroczysty border */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+  
 }
 
-.footer-content {
-  display: flex;
-  width: 40%;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+.footer-text {
+  margin: 0 0 10px;
+  font-size: 17px;
 }
-.links-container {
-  margin-left: 3rem;
+
+.footer-links {
   display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   
-  svg {
-    font-size: 1.6rem;
-  }
-  
-  p {
-    margin-left: 1rem;
-    font-size: 1.1rem;
-    white-space: nowrap;
-  }
+}
+
+.icon {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.contact-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #E11D48; /* Jasny kolor (np. złoty) */
+  text-shadow: 0 0 10px #E11D48, 0 0 20px #E11D48;
 }
 
 .link {
@@ -259,7 +269,7 @@ h1 {
 }
 .btn-animated:hover {
   transform: scale(1.1);
-  background-color: red; /* Możesz zmienić na dowolny kolor */
+  background-color: #E11D48;
 }
 .btn-animated::after {
   content: '';
@@ -290,15 +300,13 @@ h1 {
   }
 }
 
-
-
 .forms-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  background-color: #162029;
+  background-color: #111827;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 5rem;
@@ -366,17 +374,24 @@ h1 {
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       color: #fff;
-      background-color: #007bff;
+      background-color: #6000ff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: #0056b3;
+        background-color: #6000ff;
+        transform: scale(1.05); /* Powiększenie przy najechaniu */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lekki cień */
       }
     }
   }
+}
+
+.custom-active-class {
+  color: #E11D48 !important; 
+   
 }
 
 .popup {
@@ -413,8 +428,9 @@ h1 {
 
 .me-container{
   margin-top: 5rem;
-  
 }
+
+
 
 .me-info {
   font-family: 'Poppins', Arial, sans-serif; /* Nowoczesna i czytelna czcionka */
@@ -439,6 +455,10 @@ h1 {
     
   }
 }
+
+
+
+
 
 /* Dodanie ozdobnych detali */
 .me-info::before {
@@ -474,6 +494,7 @@ h1 {
     flex-direction: column; /* Układ pionowy */
     text-align: center; /* Centruj tekst */
     justify-content: baseline;
+    
     
     .rightimg{
       width: 80%;

@@ -44,9 +44,19 @@ function Content() {
   return (
     <div>
       <div className="introduction">
-        <h1 className="intro-text">
+        <motion.h1 className="intro-text"
+          initial={{ opacity: 0, scale: 0.6 }} // Zmniejszenie i ukrycie na początku
+          animate={{ opacity: 1, scale: 1 }} // Pełna widoczność i powrót do normalnego rozmiaru
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+            duration: 1,
+          }}
+
+        >
           Pierwsze Wrażenie Liczy się w Sieci - Zbuduj Je z Naszą Stroną Wizytówką
-        </h1>
+        </motion.h1>
       </div>
       <div className="second-img-container">
         <motion.div ref={textRef} style={{ x: textX }} className="text-button">

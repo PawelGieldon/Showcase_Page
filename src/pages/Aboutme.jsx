@@ -2,19 +2,53 @@ import React from "react";
 import Header from "../components/Header";
 import { FaArrowDownLong } from "react-icons/fa6";
 import Footer from "../components/Footer";
+import { MdOutlineComputer } from "react-icons/md";
+import {
+    motion,
+    useScroll,
+    useMotionValueEvent,
+    useTransform,
+    useInView,
+    useAnimation,
+  } from "framer-motion";
 
 function Aboutme() {
     return (
         <div>
             <Header/>
-            <div className="introduction intro">                           
-                    <div className="arrow-container">
-                        <h1>Dowiedz się więcej o mnie</h1>
-                        <FaArrowDownLong className="arrow"/>
-                    </div>
+            <div className="introduction intro">                              
+                <motion.h1 className="intro-text"
+                initial={{ opacity: 0, scale: 0.6 }} // Zmniejszenie i ukrycie na początku
+                animate={{ opacity: 1, scale: 1 }} // Pełna widoczność i powrót do normalnego rozmiaru
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 1,
+                }}
+      
+                
+                >
+                Dowiedz się więcej o mnie
+                </motion.h1>
+                <motion.div
+                    className="arrow"
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 10, opacity: 1 }}
+                    transition={{
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    duration: 1.5,
+                    }}
+                >
+                    <FaArrowDownLong />
+                </motion.div>    
             </div>
             <div className="me-container me-info">
-                <h3>💻 Co mnie wyróżnia?</h3>
+                <div className="computer-wrapper">
+                    <MdOutlineComputer />
+                    <h3> Co mnie wyróżnia?</h3>  
+                </div>
                 <p>- Znajomość najnowszych technologii front-endowych, takich jak HTML5, CSS3, JavaScript, React oraz Bootstrap</p>
                 <p>- Tworzenie responsywnych projektów dostosowanych do urządzeń mobilnych</p>
                 <p>- Dbałość o szczegóły i intuicyjność interfejsu użytkownika </p>

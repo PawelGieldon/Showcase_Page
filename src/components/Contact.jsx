@@ -16,7 +16,7 @@ function Contact() {
     const telephone = formData.get("telephone").trim();
 
     if (!name || !email || !message || !telephone) {
-      setPopupMessage("Please fill out all fields before sending the message.");
+      setPopupMessage("Proszę wypełnij wszystkie pola");
       setIsPopupVisible(true);
       return;
     }
@@ -27,12 +27,12 @@ function Contact() {
       })
       .then(
         () => {
-          setPopupMessage("Your message has been sent successfully!");
+          setPopupMessage("Twoja wiadomość została poprawnie wysłana!");
           setIsPopupVisible(true);
           form.current.reset();
         },
         (error) => {
-          setPopupMessage(`Failed to send the message: ${error.text}`);
+          setPopupMessage(`Błąd w wysyłaniu wiadomości! ${error.text}`);
           setIsPopupVisible(true);
         }
       );

@@ -59,15 +59,27 @@ body {
     letter-spacing: 3px;
     line-height: 1.4;
     padding: 20px;
-    max-width: 80%; /* Maksymalna szerokość nagłówka */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Efekt cienia */
+    max-width: 80%; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     width: 60%;
-    
 }
 
 .intro {
   display: flex;
   flex-direction: column;
+}
+
+.offer-text {
+    position: relative;
+    color: white;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    padding: 20px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    width: 60%;
 }
 
 .img-container { 
@@ -277,6 +289,7 @@ body {
 .btn-animated:hover {
   transform: scale(1.1);
   background-color: #E11D48;
+  color: black;
 }
 .btn-animated::after {
   content: '';
@@ -437,15 +450,15 @@ body {
 
 
 .me-info {
-  font-family: 'Poppins', Arial, sans-serif; /* Nowoczesna i czytelna czcionka */
-  font-size: 1.2rem; /* Większa czcionka dla lepszej czytelności */
-  line-height: 1.8; /* Więcej przestrzeni między wierszami */
-  color: #ffffff; /* Jasny kolor tekstu */
-  padding: 2rem; /* Duży odstęp wewnętrzny */
-  border-radius: 12px; /* Zaokrąglenie rogów dla nowoczesnego wyglądu */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Mocniejszy cień dla efektu głębi */
-  position: relative; /* Umożliwienie dodania ozdobnych elementów */
-  overflow: hidden; /* Ukrycie elementów wychodzących poza granice kontenera */
+  font-family: 'Poppins', Arial, sans-serif; 
+  font-size: 1.2rem; 
+  line-height: 1.8; 
+  color: #ffffff; 
+  padding: 2rem; 
+  border-radius: 12px; 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+  position: relative; 
+  overflow: hidden; 
 
   
   h3,p,svg {
@@ -490,7 +503,7 @@ body {
   z-index: 1;
 }
 
-.computer-wrapper {
+.icons-wrapper {
   display: flex;
   align-items: center;
   gap: 18px;
@@ -498,11 +511,30 @@ body {
   svg {
     font-size: 1.6rem;
     color: #E11D48;
+    flex-shrink: 0;
   }
   h3{
     margin: 0;
     
   }
+}
+
+.cards-container {
+  display: flex;
+  margin-top: 8rem;
+}
+
+.me-info .text-in-card {
+  margin: 0 auto;
+  width: 98%;
+  text-align: center;
+}
+
+.card-info {
+  width: 21%;
+  height: 600px;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 @media (max-width: 860px) {
@@ -570,13 +602,47 @@ body {
     width: 90%;
   }
 
+  .intro-text-mobile {
+    margin-top: 6.5rem;
+  }
+
   .footer-links {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
+
+  
+
+  .offer-text {
+    width: 90%;
+  }
+
+  .cards-container {
+    display: grid; /* Używamy grid zamiast flex */
+    grid-template-columns: repeat(2, 1fr); /* Tworzymy dwie kolumny o równej szerokości */
+    gap: 1rem; /* Odstęp między kartami */
+    margin-top: 8rem;
+
+    .card-info {
+      width: 70%;
+    }
+  }
+
 }
 
+@media (max-width: 600px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    
+    .card-info {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
 
 @media screen and (min-width: 861px) and (max-width: 1335px) {
   .img-container p{
@@ -594,4 +660,11 @@ body {
     width: 55%;
   }
 
+  .intro-text-mobile {
+    width: 80%;
+  }
+
+  .card-info {
+    
+  }
 }

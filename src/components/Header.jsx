@@ -33,6 +33,15 @@ function Header() {
                 Strona Główna
               </NavLink>
               <NavLink 
+                to="/Offer" 
+                className={({ isActive }) => 
+                  isActive ? "nav-link active custom-active-class" : "nav-link"
+                }
+                aria-current="page"
+              >
+                Oferta
+              </NavLink>
+              <NavLink 
                 to="/Aboutme" 
                 className={({ isActive }) => 
                   isActive ? "nav-link active custom-active-class" : "nav-link"

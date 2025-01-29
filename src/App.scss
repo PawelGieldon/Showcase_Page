@@ -72,7 +72,6 @@ body {
 .offer-text {
     position: relative;
     color: white;
-    color: white;
     font-size: 20px;
     text-align: center;
     letter-spacing: 1px;
@@ -528,6 +527,21 @@ body {
   margin: 0 auto;
   width: 98%;
   text-align: center;
+  margin-top: 3rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: #E11D48;
+  padding-bottom: 10px;
+}
+
+.me-info .lower-cardtext {
+  margin: 0;
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+  font-size: 15px;
 }
 
 .card-info {
@@ -535,6 +549,19 @@ body {
   height: 600px;
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.me-info-img {
+  background-image: url("../web.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  
+}
+
+.host {
+  background-image: url("../host.png");
+  
 }
 
 @media (max-width: 860px) {
@@ -622,11 +649,15 @@ body {
     display: grid; /* Używamy grid zamiast flex */
     grid-template-columns: repeat(2, 1fr); /* Tworzymy dwie kolumny o równej szerokości */
     gap: 1rem; /* Odstęp między kartami */
-    margin-top: 8rem;
+    margin-top: 3rem;
 
     .card-info {
       width: 70%;
     }
+  }
+  
+  .me-info .text-in-card {
+    margin-top: 0;
   }
 
 }
@@ -635,12 +666,16 @@ body {
   .cards-container {
     display: flex;
     flex-direction: column;
-    
+    margin-top: 3rem;
     .card-info {
       width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  .me-info .text-in-card{
+    margin-top: 1rem;
   }
 }
 
@@ -666,5 +701,41 @@ body {
 
   .card-info {
     
+  }
+
+  .cards-container {
+    display: grid; /* Używamy grid zamiast flex */
+    grid-template-columns: repeat(3, 1fr); /* Tworzymy dwie kolumny o równej szerokości */
+    gap: 1rem; /* Odstęp między kartami */
+    margin-top: 8rem;
+
+    .card-info {
+      width: 70%;
+    }
+  }
+
+  .me-info .text-in-card {
+    margin-top: 0;
+  }
+
+  
+}
+
+@media screen and (min-width: 600px) and (max-width: 660px) {
+  .me-info-img{
+    background-size: 50%;
+  }
+}
+
+@media screen and (min-width: 861px) and (max-width: 1019px) {
+  .me-info-img{
+    background-size: 50%;
+  }
+
+}
+
+@media screen and (min-width: 1336px) and (max-width: 1364px) {
+  .me-info-img{
+    background-size: 60%;
   }
 }

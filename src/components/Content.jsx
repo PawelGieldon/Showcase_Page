@@ -41,6 +41,13 @@ function Content() {
    });
    const h2X = useTransform(h2Progress, [0, 0.3], ["50%", "0%"]);
 
+   useEffect(() => {
+    const carouselElement = document.querySelector("#carouselExampleInterval");
+    if (carouselElement) {
+      new bootstrap.Carousel(carouselElement, { interval: 2000 });
+    }
+  }, []);
+
   return (
     <div>
       <div className="introduction">
@@ -110,13 +117,13 @@ function Content() {
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="3000">
+          <div className="carousel-item active" data-bs-interval="5000">
             <h5>W pełni Responsywna strona!</h5>
           </div>
-          <div className="carousel-item" data-bs-interval="3000">
+          <div className="carousel-item" data-bs-interval="2000">
             <h5>Projekt tworzony za pomocą najnowszych technologii</h5>
           </div>
-          <div className="carousel-item" data-bs-interval="3000">
+          <div className="carousel-item">
             <h5>Wyjątkowa jakość za niską cenę!</h5>
           </div>
         </div>
